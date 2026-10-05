@@ -1,0 +1,79 @@
+version: 2
+
+models:
+  - name: dim_channel
+    columns:
+      - name: channel_key
+        tests: [unique, not_null]
+      - name: channel_code
+        tests: [unique, not_null]
+  - name: dim_order_mode
+    columns:
+      - name: order_mode_key
+        tests: [unique, not_null]
+  - name: dim_location
+    columns:
+      - name: location_key
+        tests: [unique, not_null]
+      - name: city
+        tests: [unique, not_null]
+  - name: dim_payment
+    columns:
+      - name: payment_key
+        tests: [unique, not_null]
+  - name: dim_item
+    columns:
+      - name: item_key
+        tests: [unique, not_null]
+      - name: item_type
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Single Item', 'Daypack', 'Add-On']
+  - name: dim_date
+    columns:
+      - name: date_key
+        tests: [unique, not_null]
+
+  - name: fact_cheque
+    columns:
+      - name: cheque_key
+        tests: [unique, not_null]
+      - name: cheque_no
+        tests: [unique, not_null]
+      - name: date_key
+        tests:
+          - not_null
+          - relationships: {arguments: {to: ref('dim_date'), field: date_key}}
+      - name: location_key
+        tests:
+          - not_null
+          - relationships: {arguments: {to: ref('dim_location'), field: location_key}}
+      - name: channel_key
+        tests:
+          - not_null
+          - relationships: {arguments: {to: ref('dim_channel'), field: channel_key}}
+      - name: order_mode_key
+        tests:
+          - not_null
+          - relationships: {arguments: {to: ref('dim_order_mode'), field: order_mode_key}}
+      - name: payment_key
+        tests:
+          - not_null
+          - relationships: {arguments: {to: ref('dim_payment'), field: payment_key}}
+
+  - name: fact_cheque_detail
+    columns:
+      - name: cheque_detail_key
+        tests: [unique, not_null]
+      - name: cheque_key
+        tests:
+          - not_null
+          - relationships: {arguments: {to: ref('fact_cheque'), field: cheque_key}}
+      - name: item_key
+        tests:
+          - not_null
+          - relationships: {arguments: {to: ref('dim_item'), field: item_key}}
+      - name: is_addon
+        tests:
+          - accepted_values: {arguments: {values: ['Y', 'N']}}

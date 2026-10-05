@@ -1,0 +1,29 @@
+name: restaurant_dbt
+version: "1.0.0"
+config-version: 2
+profile: restaurant_dbt          # must match the name in profiles.yml
+
+vars:
+  tax_rate: 0.05                 # 5% tax used in fact_cheque
+
+seeds:
+  restaurant_dbt:
+    raw_kaggle_sales:
+      +column_types:             # keep everything as raw text, exactly like the Kaggle file
+        order_date: string
+        price: string
+        quantity: string
+        purchase_type: string
+        payment_method: string
+        manager: string
+        city: string
+        product: string
+
+models:
+  restaurant_dbt:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table

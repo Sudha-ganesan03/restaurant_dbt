@@ -1,0 +1,6 @@
+location_code,store_name,city,country,region,manager_name
+LOC01,Berlin Central,Berlin,Germany,Europe,Walter Muller
+LOC02,Lisbon Downtown,Lisbon,Portugal,Europe,Joao Silva
+LOC03,London Bridge,London,United Kingdom,Europe,Tom Jackson
+LOC04,Madrid Plaza,Madrid,Spain,Europe,Pablo Perez
+LOC05,Paris Opera,Paris,France,Europe,Remy Monet

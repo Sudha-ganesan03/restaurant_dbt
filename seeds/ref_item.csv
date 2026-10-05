@@ -1,0 +1,24 @@
+item_code,item_name,category,item_type,unit_price,veg_nonveg
+BG01,Classic Burger,Burgers,Single Item,12.99,Non-Veg
+BG02,Cheese Burger,Burgers,Single Item,13.99,Non-Veg
+BG03,Veggie Burger,Burgers,Single Item,11.99,Veg
+CS01,Crispy Chicken Sandwich,Chicken Sandwiches,Single Item,9.95,Non-Veg
+CS02,Spicy Chicken Sandwich,Chicken Sandwiches,Single Item,10.45,Non-Veg
+FR01,Regular Fries,Fries,Single Item,3.49,Veg
+FR02,Peri Peri Fries,Fries,Single Item,3.99,Veg
+BV01,Cola,Beverages,Single Item,2.95,Veg
+BV02,Iced Tea,Beverages,Single Item,2.95,Veg
+BV03,Milkshake,Beverages,Single Item,4.49,Veg
+SD01,Onion Rings,Sides & Other,Single Item,4.99,Veg
+SD02,Chicken Nuggets,Sides & Other,Single Item,4.99,Non-Veg
+SD03,Brownie,Sides & Other,Single Item,4.99,Veg
+DP01,Classic Burger Day Pack,Daypack,Daypack,17.99,Non-Veg
+DP02,Chicken Sandwich Day Pack,Daypack,Daypack,15.99,Non-Veg
+DP03,Veggie Day Pack,Daypack,Daypack,16.49,Veg
+DP04,Family Day Pack (4 pax),Daypack,Daypack,49.99,Non-Veg
+AD01,Extra Cheese,Add-On,Add-On,0.99,Veg
+AD02,Extra Patty,Add-On,Add-On,2.49,Non-Veg
+AD03,Bacon Strips,Add-On,Add-On,1.49,Non-Veg
+AD04,Dip Sauce,Add-On,Add-On,0.69,Veg
+AD05,Upsize Drink,Add-On,Add-On,0.79,Veg
+AD06,Jalapenos,Add-On,Add-On,0.59,Veg

@@ -1,0 +1,10 @@
+channel_code,channel_name,channel_group,channel_owner
+CH01,In-Store POS,Offline,Own
+CH02,Drive-Thru Lane,Offline,Own
+CH03,Call Center,Offline,Own
+CH04,Website,Online,Own
+CH05,Mobile App,Online,Own
+CH06,Swiggy,Online,Aggregator
+CH07,Zomato,Online,Aggregator
+CH08,Uber Eats,Online,Aggregator
+CH09,Kiosk,Offline,Own

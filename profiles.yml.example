@@ -1,0 +1,13 @@
+# Copy this file to  ~/.dbt/profiles.yml  (Windows: C:\Users\<you>\.dbt\profiles.yml)
+# and fill in the 4 values from Databricks (SQL Warehouses > your warehouse > Connection details)
+restaurant_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      host: <your-workspace-host>.cloud.databricks.com   # Server hostname
+      http_path: /sql/1.0/warehouses/<warehouse-id>      # HTTP path
+      token: <your-personal-access-token>                # User settings > Developer > Access tokens
+      catalog: workspace                                 # your catalog name
+      schema: restaurant_dbt                             # dbt will create this schema
+      threads: 4

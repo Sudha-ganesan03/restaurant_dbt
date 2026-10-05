@@ -1,0 +1,4 @@
+payment_code,payment_method,payment_type
+PM01,Cash,Cash
+PM02,Credit Card,Card
+PM03,Gift Card,Prepaid

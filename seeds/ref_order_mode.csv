@@ -1,0 +1,6 @@
+order_mode_code,order_mode_name,service_type
+OM01,Dine-In,On-premise
+OM02,Takeaway,Off-premise
+OM03,Delivery,Off-premise
+OM04,Drive-Thru,Off-premise
+OM05,Curbside Pickup,Off-premise
